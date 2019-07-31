@@ -1,6 +1,6 @@
 //make an array
 
-const bookList = [
+/*const bookList = [
   'elia1',
   'elia2',
   'elia3',
@@ -20,65 +20,83 @@ const bookList = [
 
 //make an object containing info
 
-const bookInfo = {
-  elia1: {
-    name: 'Elia 1',
-    Author: 'Elia the Famouse',
-    Language: 'English',
-  },
-  elia2: {
-    name: 'Elia 1',
-    Author: 'Elia the Famouse',
-    Language: 'English',
-  },
-  elia3: {
-    name: 'Elia 1',
-    Author: 'Elia the Famouse',
-    Language: 'English',
-  },
-  elia4: {
-    name: 'Elia 1',
-    Author: 'Elia the Famouse',
-    Language: 'English',
-  },
-  elia5: {
-    name: 'Elia 1',
-    Author: 'Elia the Famouse',
-    Language: 'English',
-  },
-  elia6: {
-    name: 'Elia 1',
-    Author: 'Elia the Famouse',
-    Language: 'English',
-  },
-
-  elia7: {
-    name: 'Elia 1',
-    Author: 'Elia the Famouse',
-    Language: 'English',
-  },
-  elia8: {
-    name: 'Elia 1',
-    Author: 'Elia the Famouse',
-    Language: 'English',
-  },
-  elia9: {
-    name: 'Elia 1',
-    Author: 'Elia the Famouse',
-    Language: 'English',
-  },
-  elia1: {
-    name: 'Elia 1',
-    Author: 'Elia the Famouse',
-    Language: 'English',
-  },
-};
-
 let ul = document.createElement('ul');
 document.getElementById('books').appendChild(ul);
 
-bookList.forEach(function (book) {
+bookList.forEach(book => {
   let li = document.createElement('li');
   ul.appendChild(li);
   li.innerHTML += book;
+});
+*/
+
+const bookInfo = [{
+
+    name: 'Elia 1',
+    Author: 'Elia the Famouse',
+    Language: 'English',
+    img: 'eli.jpg',
+
+  },
+  {
+    name: 'Elia 2',
+    Author: 'Elia the Famouse',
+    Language: 'English',
+    img: 'eli.jpg',
+  },
+  {
+    name: 'Elia 3',
+    Author: 'Elia the Famouse',
+    Language: 'English',
+    img: 'eli.jpg',
+  },
+  {
+    name: 'Elia 4',
+    Author: 'Elia the Famouse',
+    Language: 'English',
+    img: 'eli.jpg',
+  },
+  {
+    name: 'Elia 5',
+    Author: 'Elia the Famouse',
+    Language: 'English',
+    img: 'eli.jpg',
+  },
+  {
+    name: 'Elia 6',
+    Author: 'Elia the Famouse',
+    Language: 'English',
+    img: 'eli.jpg',
+  },
+
+  {
+    name: 'Elia 7',
+    Author: 'Elia the Famouse',
+    Language: 'English',
+    img: 'eli.jpg',
+  },
+  {
+    name: 'Elia 8',
+    Author: 'Elia the Famouse',
+    Language: 'English',
+    img: 'eli.jpg',
+  },
+  {
+    name: 'Elia 9',
+    Author: 'Elia the Famouse',
+    Language: 'English',
+    img: 'eli.jpg',
+  },
+  {
+    name: 'Elia 10',
+    Author: 'Elia the Famouse',
+    Language: 'English',
+    img: 'eli.jpg',
+  },
+];
+
+bookInfo.forEach(info => {
+  let div = document.createElement('div');
+  document.getElementById('inf').appendChild(div);
+  div.innerHTML += info.name;
 });

@@ -1,7 +1,6 @@
 'use strict';
 
-const monday = [
-  {
+const monday = [{
     name: 'Write a summary HTML/CSS',
     duration: 180,
   },
@@ -19,8 +18,7 @@ const monday = [
   },
 ];
 
-const tuesday = [
-  {
+const tuesday = [{
     name: 'Keep writing summary',
     duration: 240,
   },
@@ -45,10 +43,7 @@ const tuesday = [
 const maartjesTasks = monday.concat(tuesday);
 const maartjesHourlyRate = 20;
 
-function computeEarnings(tasks, hourlyRate) {
-  // Replace this comment and the next line with your code
-  console.log(tasks, hourlyRate);
-}
+
 
 // eslint-disable-next-line no-unused-vars
 const earnings = computeEarnings(maartjesTasks, maartjesHourlyRate);

@@ -12,7 +12,6 @@ const doubleOddNumbers = numbers => {
   return doubles;
 };
 
-m
 
 console.log(doubleOddNumbers(myNumbers));
 

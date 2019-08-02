@@ -31,51 +31,46 @@ bookList.forEach(book => {
 */
 
 const bookInfo = {
-    'Elia1': {
-      properties: {
-        name: 'Elia 1',
-        Author: 'Elia the Famouse',
-        Language: 'English',
-        img: 'eli.jpg',
-      },
-    },
-    'Elia2': {
-      properties: {
-        name: 'Elia 2',
-        Author: 'Elia the Famouse',
-        Language: 'English',
-        img: 'eli.jpg',
-      },
-    },
-    'Elia3': {
-      properties: {
-        name: 'Elia 3',
-        Author: 'Elia the Famouse',
-        Language: 'English',
-        img: 'eli.jpg',
-      },
-    },
-    'Elia4': {
-      properties: {
-        name: 'Elia 4',
-        Author: 'Elia the Famouse',
-        Language: 'English',
-        img: 'eli.jpg',
-      },
-    },
-    'Elia5': {
-      properties: {
-        name: 'Elia 5',
-        Author: 'Elia the Famouse',
-        Language: 'English',
-        img: 'eli.jpg',
-      },
+  'Elia1': {
+    properties: {
+      name: 'Elia 1',
+      Author: 'Elia the Famouse',
+      Language: 'English',
+      img: 'eli.jpg',
     },
   },
+  'Elia2': {
+    properties: {
+      name: 'Elia 2',
+      Author: 'Elia the Famouse',
+      Language: 'English',
+      img: 'eli.jpg',
+    },
+  },
+  'Elia3': {
+    properties: {
+      name: 'Elia 3',
+      Author: 'Elia the Famouse',
+      Language: 'English',
+      img: 'eli.jpg',
+    },
+  },
+  'Elia4': {
+    properties: {
+      name: 'Elia 4',
+      Author: 'Elia the Famouse',
+      Language: 'English',
+      img: 'eli.jpg',
+    },
+  },
+  'Elia5': {
+    properties: {
+      name: 'Elia 5',
+      Author: 'Elia the Famouse',
+      Language: 'English',
+      img: 'eli.jpg',
+    },
+  }
+}
 
-
-  bookInfo.forEach(info => {
-    let div = document.createElement('div');
-    document.getElementById('inf').appendChild(div);
-    div.innerHTML += info.name;
-  });
+document.getElementById('inf').innerHTML = `<li>${bookInfo.key}</li>`;

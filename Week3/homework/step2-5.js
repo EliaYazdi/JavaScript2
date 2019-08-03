@@ -13,7 +13,6 @@ function multiplyAll(arr) {
   return product;
 }
 
-
 const result = multiplyAll([
   [1, 2],
   [3, 4],

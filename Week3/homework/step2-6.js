@@ -27,9 +27,8 @@ function flattenArray2d(arr) {
 }
 console.log(flattenArray2d(arr2d));
 
-
 function flattenArray3d(arr) {
-  let flattenArr3 = [];
+  const flattenArr3 = [];
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr[i].length; j++) {
       for (let l = 0; l < arr[i][j].length; l++) {

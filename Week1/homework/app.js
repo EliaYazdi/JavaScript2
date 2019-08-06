@@ -7,7 +7,27 @@ const bookList = [
     'the-outsiders',
     'little-women',
 ];
-//console.log(bookList);
+//this is how I printed my array in the DOM but not like a list. like a line!
+document.querySelector('#myArr').innerHTML = `<li>${bookList}</li>`
+
+//Now I want to creat an unordered list out of the bookList array
+
+function createList() {
+    let uList = document.createElement('ul');
+    uList.setAttribute('id', 'li');
+    document.body.appendChild(uList);
+
+
+    for (let index in bookList) {
+        let eachBook = document.createElement('li');
+        uList.appendChild(eachBook);
+
+        eachBook.textContent = bookList[index];
+    }
+}
+createList();
+
+//Now I have an object of my must read books information
 
 let booksInfo = {
     book1: {
@@ -39,70 +59,3 @@ let booksInfo = {
         language: 'English'
     }
 };
-
-book1Arr = [];
-for (const i in booksInfo.book1) {
-    book1Arr.push(booksInfo.book1[i]);
-};
-
-document.querySelector('#first').innerHTML = `<li>${book1Arr}</li>`;
-
-
-//creat UL
-
-//make an object containing info
-
-/*let ul = document.createElement('ul');
-document.getElementById('books').appendChild(ul);
-
-bookList.forEach(book => {
-  let li = document.createElement('li');
-  ul.appendChild(li);
-  li.innerHTML += book;
-});
-*/
-
-/*const bookInfo = {
-    'Elia1': {
-        properties: {
-            name: 'Elia 1',
-            Author: 'Elia the Famouse',
-            Language: 'English',
-            img: 'eli.jpg',
-        },
-    },
-    'Elia2': {
-        properties: {
-            name: 'Elia 2',
-            Author: 'Elia the Famouse',
-            Language: 'English',
-            img: 'eli.jpg',
-        },
-    },
-    'Elia3': {
-        properties: {
-            name: 'Elia 3',
-            Author: 'Elia the Famouse',
-            Language: 'English',
-            img: 'eli.jpg',
-        },
-    },
-    'Elia4': {
-        properties: {
-            name: 'Elia 4',
-            Author: 'Elia the Famouse',
-            Language: 'English',
-            img: 'eli.jpg',
-        },
-    },
-    'Elia5': {
-        properties: {
-            name: 'Elia 5',
-            Author: 'Elia the Famouse',
-            Language: 'English',
-            img: 'eli.jpg',
-        },
-    }
-}
-
-document.getElementById('inf').innerHTML = `<li>${bookInfo.key}</li>`; */

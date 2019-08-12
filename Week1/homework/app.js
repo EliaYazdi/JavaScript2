@@ -70,7 +70,7 @@ let books = [
 ]
 
 document.body.onload = printBooks;
-//now I want to print all the information in the DOM
+//now I want to print all the information in the DOM.
 
 function createAndAppend(typ, parent, attributes = {}) {
   const elem = document.createElement(typ);
@@ -85,8 +85,8 @@ function printBooks() {
   for (const book of books) {
     const li = createAndAppend('li', ul);
     const h2 = createAndAppend('h2', li, { innerText: book.title });
-    const author = createAndAppend('h3', li, { innerText: `Author: ${book.author}` })
-    const language = createAndAppend('h3', li, { innerText: `Language: ${book.language}` })
-    const img = createAndAppend('img', li, { src: book.cover, height: 100 })
+    const author = createAndAppend('h4', li, { innerText: `Author: ${book.author}` })
+    const language = createAndAppend('h4', li, { innerText: `Language: ${book.language}` })
+    const img = createAndAppend('img', li, { src: book.cover, height: 350, width: 250 })
   }
 }

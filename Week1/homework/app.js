@@ -1,4 +1,7 @@
-//make an array
+// assert = chai.assert.deepEqual
+
+'use strict';
+/*//make an array
 
 const bookList = [
   'the-kite-runner',
@@ -8,7 +11,7 @@ const bookList = [
   'little-women',
 ];
 //this is how I printed my array in the DOM but not like a list. like a line!
-document.querySelector('#myArr').innerHTML = `<li>${bookList}</li>`
+document.querySelector('#myArr').innerHTML = `My bookList Array : ${bookList}`
 
 //Now I want to creat an unordered list out of the bookList array
 
@@ -25,51 +28,65 @@ function createList() {
     eachBook.textContent = bookList[index];
   }
 }
-createList();
+createList();*/
 
-//Now I have an object of my must read books information
+//Now I have an object array of my must read books information
 
-let booksInfo = {
-  book1: {
+
+
+let books = [
+  {
     title: 'The Kite Runner',
     author: 'Khaled Hosseini',
     language: 'English',
+    cover: 'kite.jpg'
   },
-  book2: {
+  {
     title: 'Number the Stars',
     author: 'lois Lowry',
     language: 'English',
+    cover: 'number.jpg'
 
   },
-  book3: {
+  {
     title: 'Pride and Prejudice',
     author: 'Jane Austen',
     language: 'English',
-
+    cover: 'pride.jpg'
   },
-  book4: {
+  {
     title: 'The Outsiders',
     author: 'S.E Hinton',
     language: 'English',
+    cover: 'outsiders.jpeg'
 
   },
-  book5: {
+  {
     title: 'Little Women',
     author: 'Louisa May',
-    language: 'English'
+    language: 'English',
+    cover: 'Little.png'
   }
-};
+]
 
-function makeArray(myObj) {
-  let newArray = [];
-  for (let i in myObj) {
-    newArray.push(i);
-  }
-  console.log(newArray);
+document.body.onload = printBooks;
+//now I want to print all the information in the DOM
+
+function createAndAppend(typ, parent, attributes = {}) {
+  const elem = document.createElement(typ);
+  parent.appendChild(elem);
+  for (const key in attributes) elem[key] = attributes[key]
+  return elem
 }
-let book1infoArr = makeArray(booksInfo.book1);
-let book2infoArr = makeArray(booksInfo.book2);
-let book3infoArr = makeArray(booksInfo.book3);
-let book4infoArr = makeArray(booksInfo.book4);
-let book5infoArr = makeArray(booksInfo.book5);
 
+function printBooks() {
+  const h1 = createAndAppend('h1', document.body, { innerText: 'My Must Read Books' });
+  const ul = createAndAppend('ul', document.body);
+  for (const book of books) {
+    const li = createAndAppend('li', ul);
+    const h2 = createAndAppend('h2', li, { innerText: book.title });
+    const author = createAndAppend('h3', li, { innerText: `Author: ${book.author}` })
+    const language = createAndAppend('h3', li, { innerText: `Language: ${book.language}` })
+    const img = createAndAppend('img', li, { src: book.cover, height: 100 })
+  }
+}

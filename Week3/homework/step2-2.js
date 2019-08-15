@@ -15,8 +15,8 @@ function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
     }
   }
   threeCallback(fiveCallback());
-  fiveCallback();
-  threeCallback();
+  fiveCallback(i);
+  threeCallback(i);
 }
 
 function sayThree(number) {

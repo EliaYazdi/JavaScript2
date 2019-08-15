@@ -1,13 +1,15 @@
 'use strict';
 
-function foo() {
+function foo(bar) {
+  function bar() {
+    console.log('Hello, I am bar!');
+  }
 
   console.log('Week3');
+
 }
 
-function bar() {
-  console.log('Hello, I am bar!');
-}
+
 
 foo(bar);
 

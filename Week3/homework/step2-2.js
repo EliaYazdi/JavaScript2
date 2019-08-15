@@ -13,7 +13,6 @@ function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
   }
 }
 
-
 function sayThree(number) {
   console.log('${number} is divisible by three')
 

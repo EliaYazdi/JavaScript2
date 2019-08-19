@@ -6,11 +6,18 @@ function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
     numbers.push(i);
     if (i % 3 === 0) {
 
+
     }
     if (i % 5 === 0) {
 
     }
     if (i % 3 === 0 && i % 5 === 0) {
+
+
+      threeCallback(i);
+    }
+    if (i % 5 === 0) {
+      fiveCallback(i);
 
     }
   }

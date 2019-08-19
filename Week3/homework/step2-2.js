@@ -5,17 +5,13 @@ function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
   for (let i = startIndex; i <= stopIndex; i++) {
     numbers.push(i);
     if (i % 3 === 0) {
-      threeCallback();
+      threeCallback(i);
     }
     if (i % 5 === 0) {
-      fiveCallback();
-    }
-    if (i % 3 === 0 && i % 5 === 0) {
-      threeCallback(fiveCallback());
+      fiveCallback(i);
     }
   }
 }
-
 
 function sayThree(number) {
   console.log('${number} is divisible by three')
